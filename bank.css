@@ -152,12 +152,104 @@
 @font-face {
   font-family: 'ZenMaruGothic';
   src: url('TTFs/ZenMaruGothic-Light.ttf') format('truetype');
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'ZenMaruGothic';
   src: url('TTFs/ZenMaruGothic-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*---- ZenLoop ----*/
+@font-face {
+  font-family: 'ZenLoop';
+  src: url('TTFs/ZenLoop-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenLoop';
+  src: url('TTFs/ZenLoop-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*---- ZenKurenaido ----*/
+@font-face {
+  font-family: 'ZenKurenaido';
+  src: url('TTFs/ZenKurenaido-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenLoop';
+  src: url('TTFs/ZenLoop-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*---- ZenKakuGothicNew ----*/
+@font-face {
+  font-family: 'ZenKakuGothicNew';
+  src: url('TTFs/ZenKakuGothicNew-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKakuGothicNew';
+  src: url('TTFs/ZenKakuGothicNew-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicNew';
+  src: url('TTFs/ZenKakuGothicNew-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicNew';
+  src: url('TTFs/ZenKakuGothicNew-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicNew';
+  src: url('TTFs/ZenKakuGothicNew-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*---- ZenKakuGothicAntique ----*/
+@font-face {
+  font-family: 'ZenKauGothicAntique';
+  src: url('TTFs/ZenKakuGothicAntique-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicAntique';
+  src: url('TTFs/ZenKakuGothicAntique-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicAntique';
+  src: url('TTFs/ZenKakuGothicAntique-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicAntique';
+  src: url('TTFs/ZenKakuGothicAntique-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenKauGothicAntique';
+  src: url('TTFs/ZenKakuGothicAntique-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
