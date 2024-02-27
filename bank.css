@@ -129,3 +129,35 @@
   font-weight: 900;
   font-style: normal;
 }
+
+/*---- ZenMaruGothic ----*/
+@font-face {
+  font-family: 'ZenMaruGothic';
+  src: url('TTFs/ZenMaruGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenMaruGothic';
+  src: url('TTFs/ZenMaruGothic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenMaruGothic';
+  src: url('TTFs/ZenMaruGothic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenMaruGothic';
+  src: url('TTFs/ZenMaruGothic-Light.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ZenMaruGothic';
+  src: url('TTFs/ZenMaruGothic-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
