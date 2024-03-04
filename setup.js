@@ -3308,8 +3308,35 @@ const names = [
  "ZillaSlabHighlight-Bold", 
  "ZillaSlabHighlight-Regular", 
 ]
+function getStyleWeight(fontModifier) {
+  // Add logic to set font weight based on the font style modifier
+  switch (fontModifier) {
+    case 'Bold':
+      return '700';
+    case 'Italic':
+      return 'normal'; // or you can set a different value for italic font
+    case 'Light':
+      return '300';
+    default:
+      return '400';
+  }
+ }
 function load() {
  names.forEach(name => {
-  
+  const [fontName, fontModifier] = name.split('-');
+  const fontStyle = fontModifier === 'Regular' ? 'normal' : fontModifier;
+
+  const fontFace = `@font-face {
+    font-family: '${fontName}';
+    src: url('path/to/${name}.woff') format('woff');
+    font-weight: ${getStyleWeight(fontModifier)}; /* Set font-weight based on font style modifier */
+    font-style: ${fontStyle}; /* Set font style based on font style modifier */
+  }`;
+
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.appendChild(document.createTextNode(fontFace));
+
+  document.head.appendChild(style);
  });
 }
