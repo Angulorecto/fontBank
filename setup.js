@@ -3328,7 +3328,7 @@ function load() {
 
   const fontFace = `@font-face {
     font-family: '${fontName}';
-    src: url('path/to/${name}.woff') format('woff');
+    src: url('TTFs/${name}.woff') format('woff');
     font-weight: ${getStyleWeight(fontModifier)}; /* Set font-weight based on font style modifier */
     font-style: ${fontStyle}; /* Set font style based on font style modifier */
   }`;
