@@ -3308,3 +3308,8 @@ const names = [
  "ZillaSlabHighlight-Bold", 
  "ZillaSlabHighlight-Regular", 
 ]
+function load() {
+ names.forEach(name => {
+  
+ });
+}
