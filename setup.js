@@ -3351,8 +3351,11 @@ function getStyleWeight(fontModifier) {
   return style === 'Italic' ? 'italic ' + weight : weight;
 }
 
+let num = 0;
+
 function load() {
  names.forEach(name => {
+  if (num <= 100) {
   const [fontName, fontModifier] = name.split('-');
   const fontStyle = fontModifier === 'Regular' ? 'normal' : fontModifier;
 
@@ -3373,5 +3376,7 @@ function load() {
   p.innerHTML = "Lorem Ipsum";
   p.style.font-family = "${fontName}";
   document.body.appendChild(p);
+  num++;
+  }
  });
 }
