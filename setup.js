@@ -3371,6 +3371,6 @@ function load() {
 
   var p = document.createElement("p");
   p.innerHTML = "Lorem Ipsum";
-  
+  document.head.appendChild(p);
  });
 }
