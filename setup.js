@@ -3368,5 +3368,7 @@ function load() {
   style.appendChild(document.createTextNode(fontFace));
 
   document.head.appendChild(style);
+
+  var 
  });
 }
