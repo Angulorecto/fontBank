@@ -3309,18 +3309,41 @@ const names = [
  "ZillaSlabHighlight-Regular", 
 ]
 function getStyleWeight(fontModifier) {
-  // Add logic to set font weight based on the font style modifier
-  switch (fontModifier) {
-    case 'Bold':
-      return '700';
-    case 'Italic':
-      return 'normal'; // or you can set a different value for italic font
+  let weight = '400';
+  
+  const modifierArray = fontModifier.split(/(?=[A-Z])/);
+  const style = modifierArray.pop();
+  const weightModifier = modifierArray.join('');
+
+  switch (weightModifier) {
+    case 'Thin':
+      weight = '100';
+      break;
+    case 'ExtraLight':
+      weight = '200';
+      break;
     case 'Light':
-      return '300';
+      weight = '300';
+      break;
+    case 'SemiBold':
+      weight = '600';
+      break;
+    case 'Bold':
+      weight = '700';
+      break;
+    case 'ExtraBold':
+      weight = '800';
+      break;
+    case 'Black':
+      weight = '900';
+      break;
     default:
-      return '400';
+      break;
   }
- }
+
+  return style === 'Italic' ? 'italic ' + weight : weight;
+}
+
 function load() {
  names.forEach(name => {
   const [fontName, fontModifier] = name.split('-');
