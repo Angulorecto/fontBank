@@ -3307,13 +3307,7 @@ const names = [
  "ZillaSlab-SemiBoldItalic", 
  "ZillaSlabHighlight-Bold", 
  "ZillaSlabHighlight-Regular", 
-]
-
-function setup() {
- names.forEach(name => {
-  
- });
-}
+];
 
 function getStyleWeight(fontModifier) {
   let weight = '400';
