@@ -3374,7 +3374,7 @@ function load() {
 
   var p = document.createElement("p");
   p.innerHTML = "Lorem Ipsum";
-  p.style.font-family = "${fontName}";
+  p.setAttribute("style", 'font-family: '${fontName}';');
   document.body.appendChild(p);
   num++;
   }
