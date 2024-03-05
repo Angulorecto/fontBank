@@ -3318,7 +3318,9 @@ function setup() {
 function getStyleWeight(fontModifier) {
   let weight = '400';
   
-  const modifierArray = fontModifier.split(/(?=[A-Z])/);
+  if (fontModifier) {
+    const modifierArray = fontModifier.split(/(?=[A-Z])/);
+  }
   const style = modifierArray.pop();
   const weightModifier = modifierArray.join('');
 
