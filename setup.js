@@ -3369,6 +3369,8 @@ function load() {
 
   document.head.appendChild(style);
 
-  var 
+  var p = document.createElement("p");
+  p.innerHTML = "Lorem Ipsum";
+  
  });
 }
