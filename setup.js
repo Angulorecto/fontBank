@@ -3311,48 +3311,44 @@ const names = [
 
 function getStyleWeight(fontModifier) {
   let weight = '400';
-  let modifierArray = [];
-
-  if (fontModifier) {
-    modifierArray = fontModifier.split(/(?=[A-Z])/);
-  }
+  let style = 'normal';
   
-  const style = modifierArray.pop();
-  const weightModifier = modifierArray.join('');
+  if (fontModifier) {
+    if (fontModifier === 'Italic') {
+      style = 'italic';
+    } else if (fontModifier.includes('Italic')) {
+      style = 'italic';
+      fontModifier = fontModifier.replace('Italic', '');
+    }
 
-  switch (weightModifier) {
-    case 'Thin':
-      weight = '100';
-      break;
-    case 'ExtraLight':
-      weight = '200';
-      break;
-    case 'Light':
-      weight = '300';
-      break;
-    case 'SemiBold':
-      weight = '600';
-      break;
-    case 'Bold':
-      weight = '700';
-      break;
-    case 'ExtraBold':
-      weight = '800';
-      break;
-    case 'Black':
-      weight = '900';
-      break;
-    default:
-      break;
+    switch (fontModifier) {
+      case 'Thin':
+        weight = '100';
+        break;
+      case 'ExtraLight':
+        weight = '200';
+        break;
+      case 'Light':
+        weight = '300';
+        break;
+      case 'SemiBold':
+        weight = '600';
+        break;
+      case 'Bold':
+        weight = '700';
+        break;
+      case 'ExtraBold':
+        weight = '800';
+        break;
+      case 'Black':
+        weight = '900';
+        break;
+      default:
+        break;
+    }
   }
 
-  if (style === 'Italic') {
-    return 'italic ' + weight;
-  } else if (fontModifier.includes('Italic')) {
-    return weight;
-  } else {
-    return weight;
-  }
+  return `${style} ${weight}`;
 }
 
 function load() {
