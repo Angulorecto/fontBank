@@ -3352,26 +3352,25 @@ function getStyleWeight(fontModifier) {
 }
 
 function load() {
- names.forEach(name => {
-  const [fontName, fontModifier] = name.split('-');
-  const fontStyle = fontModifier === 'Regular' ? 'normal' : fontModifier;
+  names.forEach(name => {
+    const [fontName, fontModifier] = name.split('-');
+    const fontStyle = fontModifier === 'Regular' ? 'normal' : fontModifier;
 
-  const fontFace = `@font-face {
-    font-family: '${fontName}';
-    src: url('TTFs/${name}.ttf') format('truetype');
-    font-weight: ${getStyleWeight(fontModifier)}; /* Set font-weight based on font style modifier */
-    font-style: ${fontStyle}; /* Set font style based on font style modifier */
-  }`;
+    const fontFace = `@font-face {
+      font-family: '${fontName}';
+      src: url('TTFs/${name}.ttf') format('truetype');
+      font-weight: ${getStyleWeight(fontModifier)};
+      font-style: ${fontStyle};
+    }`;
 
-  const style = document.createElement('style');
-  style.type = 'text/css';
-  style.appendChild(document.createTextNode(fontFace));
+    const style = document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(fontFace));
+    document.head.appendChild(style);
 
-  document.head.appendChild(style);
-
-  var p = document.createElement("p");
-  p.innerHTML = "Lorem Ipsum";
-  p.setAttribute("style", `font-family: "${fontName}";`);
-  document.body.appendChild(p);
- });
+    var p = document.createElement("p");
+    p.innerHTML = "Lorem Ipsum";
+    p.setAttribute("style", `font-family: "${fontName}"; font-style: ${fontStyle};`); // Added font-style here
+    document.body.appendChild(p);
+  });
 }
