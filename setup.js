@@ -3346,7 +3346,13 @@ function getStyleWeight(fontModifier) {
       break;
   }
 
-  return style === 'Italic' ? 'italic ' + weight : weight;
+  if (style === 'Italic') {
+    return 'italic ' + weight;
+  } else if (fontModifier.includes('Italic')) {
+    return weight;
+  } else {
+    return weight;
+  }
 }
 
 function load() {
