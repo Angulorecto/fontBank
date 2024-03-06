@@ -3310,6 +3310,8 @@ const names = [
 ];
 
 function load() {
+  let fontFaces = '';
+
   names.forEach(name => {
     const fontFace = `@font-face {
       font-family: '${name}';
@@ -3318,11 +3320,15 @@ function load() {
       font-style: normal;
     }`;
 
-    const style = document.createElement('style');
-    style.type = 'text/css';
-    style.appendChild(document.createTextNode(fontFace));
-    document.head.appendChild(style);
+    fontFaces += fontFace;
+  });
 
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.appendChild(document.createTextNode(fontFaces));
+  document.head.appendChild(style);
+
+  names.forEach(name => {
     var p = document.createElement("p");
     p.innerHTML = "The quick brown fox jumps over the lazy dog";
     p.setAttribute("style", `font-family: "${name}";`); // Added font-style here
