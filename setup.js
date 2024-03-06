@@ -3309,58 +3309,13 @@ const names = [
  "ZillaSlabHighlight-Regular", 
 ];
 
-function getStyleWeight(fontModifier) {
-  let weight = '400';
-  let style = 'normal';
-  
-  if (fontModifier) {
-    if (fontModifier === 'Italic') {
-      style = 'italic';
-    } else if (fontModifier.includes('Italic')) {
-      style = 'italic';
-      fontModifier = fontModifier.replace('Italic', '');
-    }
-
-    switch (fontModifier) {
-      case 'Thin':
-        weight = '100';
-        break;
-      case 'ExtraLight':
-        weight = '200';
-        break;
-      case 'Light':
-        weight = '300';
-        break;
-      case 'SemiBold':
-        weight = '600';
-        break;
-      case 'Bold':
-        weight = '700';
-        break;
-      case 'ExtraBold':
-        weight = '800';
-        break;
-      case 'Black':
-        weight = '900';
-        break;
-      default:
-        break;
-    }
-  }
-
-  return `${style} ${weight}`;
-}
-
 function load() {
   names.forEach(name => {
-    const [fontName, fontModifier] = name.split('-');
-    const fontStyle = fontModifier === 'Regular' ? 'normal' : fontModifier;
-
     const fontFace = `@font-face {
-      font-family: '${fontName}';
+      font-family: '${name}';
       src: url('TTFs/${name}.ttf') format('truetype');
-      font-weight: ${getStyleWeight(fontModifier)};
-      font-style: ${fontStyle};
+      font-weight: normal;
+      font-style: normal;
     }`;
 
     const style = document.createElement('style');
@@ -3370,7 +3325,7 @@ function load() {
 
     var p = document.createElement("p");
     p.innerHTML = "Lorem Ipsum";
-    p.setAttribute("style", `font-family: "${fontName}"; font-style: ${fontStyle};`); // Added font-style here
+    p.setAttribute("style", `font-family: "${name}";`); // Added font-style here
     document.body.appendChild(p);
   });
 }
