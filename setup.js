@@ -3324,7 +3324,7 @@ function load() {
     document.head.appendChild(style);
 
     var p = document.createElement("p");
-    p.innerHTML = "Lorem Ipsum";
+    p.innerHTML = "The quick brown fox jumps over the lazy dog";
     p.setAttribute("style", `font-family: "${name}";`); // Added font-style here
     document.body.appendChild(p);
   });
